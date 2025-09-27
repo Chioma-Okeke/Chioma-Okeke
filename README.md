@@ -5,6 +5,12 @@
 
 I'm from Nigeria, NG, currently in the Mountain View Time Zone 🌎. I'm a huge fan of Node.js, TypeScript, software security, and writing testable software 💻. When I'm not crushing bugs, I can be found playing basketball ⛹🏽‍♀️, playing games on my Switch 2 🎮, watching anime 🍿, lifting weights 🏋️, and spending time with my friends and family ❤️.
 
+## 🔭 I'm currently working on
+A personal budgeting application, as I cannot afford the expensive ones. 😊😅
+
+## 📫 How to reach me
+
+[<img src="assets/envelope.png" height="50px">](mailto:okekegeraldenne@gmail.com)
 
 <!--
 **Chioma-Okeke/Chioma-Okeke** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
