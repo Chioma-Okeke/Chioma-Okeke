@@ -19,6 +19,7 @@ jobs:
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: America/Denver
+          filename: metrics.svg
 
           # Token stored as secret
           token: ${{ secrets.METRICS_TOKEN }}
@@ -33,3 +34,10 @@ jobs:
           plugin_stars_limit: 3
           plugin_repositories: yes
           plugin_repositories_pinned: 3
+      - name: Commit and push metrics 
+        run: | 
+          git config user.name "github-actions[bot]" 
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metrics.svg
+          git commit -m "chore: update GitHub metrics [skip ci]" || echo "No changes to commit"
+          git push
