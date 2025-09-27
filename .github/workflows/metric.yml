@@ -1,0 +1,35 @@
+name: GitHub Metrics
+
+on:
+  # Update automatically once a day
+  schedule: 
+    - cron: "0 0 * * *"
+  # Or let you trigger manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate GitHub Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          # Your GitHub username
+          user: Chioma-Okeke
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: America/Denver
+
+          # Token stored as secret
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Plugins
+          plugin_isocalendar: yes
+          plugin_languages: yes
+          plugin_languages_ignored: html, css
+          plugin_languages_limit: 6
+          plugin_languages_details: percentage
+          plugin_stars: yes
+          plugin_stars_limit: 3
+          plugin_repositories: yes
+          plugin_repositories_pinned: 3
